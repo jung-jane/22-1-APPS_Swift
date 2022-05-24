@@ -14,6 +14,7 @@
 		3F4E1C4F2821D9B7004A92C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4E1C4D2821D9B7004A92C0 /* LaunchScreen.storyboard */; };
 		3F4E1C572821DC09004A92C0 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E1C562821DC09004A92C0 /* CountryTableViewController.swift */; };
 		3F4E1C592821E49C004A92C0 /* CountryDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E1C582821E49C004A92C0 /* CountryDefinitionViewController.swift */; };
+		3F6F0104283CA3540002C280 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F0103283CA3540002C280 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3F4E1C502821D9B7004A92C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4E1C562821DC09004A92C0 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		3F4E1C582821E49C004A92C0 /* CountryDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDefinitionViewController.swift; sourceTree = "<group>"; };
+		3F6F0103283CA3540002C280 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				3F4E1C422821D9B6004A92C0 /* AppDelegate.swift */,
 				3F4E1C442821D9B6004A92C0 /* SceneDelegate.swift */,
 				3F4E1C562821DC09004A92C0 /* CountryTableViewController.swift */,
+				3F6F0103283CA3540002C280 /* Country.swift */,
 				3F4E1C482821D9B6004A92C0 /* Main.storyboard */,
 				3F4E1C4B2821D9B7004A92C0 /* Assets.xcassets */,
 				3F4E1C4D2821D9B7004A92C0 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				3F4E1C592821E49C004A92C0 /* CountryDefinitionViewController.swift in Sources */,
 				3F4E1C432821D9B6004A92C0 /* AppDelegate.swift in Sources */,
 				3F4E1C452821D9B6004A92C0 /* SceneDelegate.swift in Sources */,
+				3F6F0104283CA3540002C280 /* Country.swift in Sources */,
 				3F4E1C572821DC09004A92C0 /* CountryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

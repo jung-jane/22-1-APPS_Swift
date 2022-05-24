@@ -7,3 +7,6 @@ for count in 10...20 {
 for friend in friends {
     print("One of the friends characters is \(friend)");
 }
+
+
+
