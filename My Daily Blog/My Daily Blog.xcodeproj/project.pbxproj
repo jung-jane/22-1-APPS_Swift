@@ -16,9 +16,11 @@
 		3F6F0121283CB5A20002C280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F011F283CB5A20002C280 /* LaunchScreen.storyboard */; };
 		3F6F012C283CB5A20002C280 /* My_Daily_BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F012B283CB5A20002C280 /* My_Daily_BlogTests.swift */; };
 		3F6F0137283CB5A20002C280 /* My_Daily_BlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F0136283CB5A20002C280 /* My_Daily_BlogUITests.swift */; };
-		3F6F0145283CBB790002C280 /* BlogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F0144283CBB790002C280 /* BlogEntry.swift */; };
 		3F6F0147283CBC210002C280 /* BlogEntriesUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F0146283CBC210002C280 /* BlogEntriesUITableViewController.swift */; };
 		3F6F0149283CBC610002C280 /* BlogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F0148283CBC610002C280 /* BlogEntryViewController.swift */; };
+		3FA5AC19283F29B000BC1E30 /* BlogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5AC17283F29B000BC1E30 /* BlogEntry+CoreDataClass.swift */; };
+		3FA5AC1A283F29B000BC1E30 /* BlogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5AC18283F29B000BC1E30 /* BlogEntry+CoreDataProperties.swift */; };
+		3FA5AC1C283F444E00BC1E30 /* BlogEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5AC1B283F444E00BC1E30 /* BlogEntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +56,11 @@
 		3F6F0132283CB5A20002C280 /* My Daily BlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Daily BlogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6F0136283CB5A20002C280 /* My_Daily_BlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Daily_BlogUITests.swift; sourceTree = "<group>"; };
 		3F6F0138283CB5A20002C280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F6F0144283CBB790002C280 /* BlogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntry.swift; sourceTree = "<group>"; };
 		3F6F0146283CBC210002C280 /* BlogEntriesUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntriesUITableViewController.swift; sourceTree = "<group>"; };
 		3F6F0148283CBC610002C280 /* BlogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryViewController.swift; sourceTree = "<group>"; };
+		3FA5AC17283F29B000BC1E30 /* BlogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3FA5AC18283F29B000BC1E30 /* BlogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlogEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3FA5AC1B283F444E00BC1E30 /* BlogEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +111,15 @@
 		3F6F0110283CB5A10002C280 /* My Daily Blog */ = {
 			isa = PBXGroup;
 			children = (
+				3FA5AC17283F29B000BC1E30 /* BlogEntry+CoreDataClass.swift */,
+				3FA5AC18283F29B000BC1E30 /* BlogEntry+CoreDataProperties.swift */,
 				3F6F0111283CB5A10002C280 /* AppDelegate.swift */,
 				3F6F0113283CB5A10002C280 /* SceneDelegate.swift */,
 				3F6F0115283CB5A10002C280 /* ViewController.swift */,
 				3F6F0146283CBC210002C280 /* BlogEntriesUITableViewController.swift */,
+				3FA5AC1B283F444E00BC1E30 /* BlogEntryTableViewCell.swift */,
 				3F6F0117283CB5A10002C280 /* Main.storyboard */,
 				3F6F0148283CBC610002C280 /* BlogEntryViewController.swift */,
-				3F6F0144283CBB790002C280 /* BlogEntry.swift */,
 				3F6F011D283CB5A20002C280 /* Assets.xcassets */,
 				3F6F011F283CB5A20002C280 /* LaunchScreen.storyboard */,
 				3F6F0122283CB5A20002C280 /* Info.plist */,
@@ -270,12 +276,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA5AC1C283F444E00BC1E30 /* BlogEntryTableViewCell.swift in Sources */,
 				3F6F0147283CBC210002C280 /* BlogEntriesUITableViewController.swift in Sources */,
 				3F6F0116283CB5A10002C280 /* ViewController.swift in Sources */,
-				3F6F0145283CBB790002C280 /* BlogEntry.swift in Sources */,
 				3F6F011C283CB5A10002C280 /* My_Daily_Blog.xcdatamodeld in Sources */,
 				3F6F0149283CBC610002C280 /* BlogEntryViewController.swift in Sources */,
 				3F6F0112283CB5A10002C280 /* AppDelegate.swift in Sources */,
+				3FA5AC19283F29B000BC1E30 /* BlogEntry+CoreDataClass.swift in Sources */,
+				3FA5AC1A283F29B000BC1E30 /* BlogEntry+CoreDataProperties.swift in Sources */,
 				3F6F0114283CB5A10002C280 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

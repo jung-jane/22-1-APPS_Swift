@@ -7,29 +7,75 @@
 
 import UIKit
 
-class BlogEntryViewController: UIViewController {
+class BlogEntryViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var BlogEntryTextView: UITextView!
-    
-    var entriesViewController : BlogEntriesUITableViewController?
+    @IBOutlet weak var botConstraint: NSLayoutConstraint!
+    var blogEntry: BlogEntry?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
+        if blogEntry == nil {
+            //create entry
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                
+                blogEntry = BlogEntry(context: context);
+                blogEntry?.date = datePicker.date
+                blogEntry?.content = "Thank you"
+                BlogEntryTextView.becomeFirstResponder();
+            }
+        }
+        
+        BlogEntryTextView.text = blogEntry?.content
+        if let dataToBeDisplayed = blogEntry?.date {
+            datePicker.date = dataToBeDisplayed
+        }
+        
+        BlogEntryTextView.delegate = self;
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        //Make Entry
-        let blogEntry = BlogEntry()
-        blogEntry.date = datePicker.date
-        blogEntry.content = BlogEntryTextView.text
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext();
         
-        //Add entry tableview array
-        entriesViewController?.blogEntries.append(blogEntry);
-        entriesViewController?.tableView.reloadData();
     }
-
+    
+    @objc func keyboardWillShow(_ notiofication: NSNotification) {
+        if let keyboardFrame: NSValue =
+            notiofication.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            
+            botConstraint.constant = keyboardHeight
+        }
+    }
+    
+    
+    @IBAction func onDelete(_ sender: Any) {
+        if blogEntry != nil {
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                
+                context.delete(blogEntry!);
+                try? context.save()
+            }
+        }
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        blogEntry?.content = BlogEntryTextView.text
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext();
+    }
+    
+    
+    @IBAction func onDateChanged(_ sender: Any) {
+        blogEntry?.date = datePicker.date;
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext();
+    }
 }
+
+
